@@ -1,6 +1,6 @@
 package com.elearning.web.model;
 
-public class Profile {
+public class Student {
 	private Integer id;
 	private String name;
 	private String email;
