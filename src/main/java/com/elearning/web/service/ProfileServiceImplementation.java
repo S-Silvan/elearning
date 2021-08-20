@@ -9,14 +9,15 @@ import org.springframework.stereotype.Component;
 import com.elearning.web.elearning.dao.ProfileDao;
 import com.elearning.web.model.Student;
 
-@Component
+import com.elearning.web.model.Student;
+
 public class ProfileServiceImplementation implements ProfileService {
 	@Autowired
 	private ProfileDao profileDao;
 
 	@Override
 	public Integer addStudent(Student student) {
-		return (int)profileDao.save(student);
+		return (Integer)profileDao.save(student);
 	}
 
 	@Override
@@ -38,5 +39,4 @@ public class ProfileServiceImplementation implements ProfileService {
 	public void deleteStudent(Integer id) {
 		profileDao.deleteById(id);
 	}
-
 }
