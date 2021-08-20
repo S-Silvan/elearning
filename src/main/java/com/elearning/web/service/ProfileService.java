@@ -1,13 +1,14 @@
 package com.elearning.web.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.elearning.web.model.Student;
 
 public interface ProfileService {
-	int addStudent(Student student);
+	Integer addStudent(Student student);
 	List<Student> getAllStudents();
-	Student getOneStudent();
-	boolean updateStudent(Student student);
-	boolean deleteStudent(int id);
+	Optional<Student> getOneStudent(Integer id);
+	Integer updateStudent(Student student);
+	void deleteStudent(Integer id);
 }

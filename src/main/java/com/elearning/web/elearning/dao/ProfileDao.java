@@ -1,5 +1,7 @@
 package com.elearning.web.elearning.dao;
 
-public class ProfileDao {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProfileDao extends JpaRepository{
 
 }
