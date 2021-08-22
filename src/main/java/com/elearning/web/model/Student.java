@@ -1,10 +1,25 @@
 package com.elearning.web.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="students")
 public class Student {
+	@Id
+	@GeneratedValue
+	@Column(name="student_id",nullable=false)
 	private Integer id;
+	@Column(name="student_name",nullable=false)
 	private String name;
+	@Column(name="student_email",nullable=false)
 	private String email;
+	@Column(name="student_phone_number",nullable=false)
 	private String phoneNumber;
+	@Column(name="student_password",nullable=false)
 	private String password;
 	//private Assignment assignment;
 	public Integer getId() {
