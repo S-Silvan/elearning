@@ -5,10 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.elearning.web.dao.ProfileDao;
 import com.elearning.web.dao.StudentDao;
 import com.elearning.web.model.Assignment;
-import com.elearning.web.model.Student;
 
 @Component
 public class StudentServiceImplementation implements StudentService {
