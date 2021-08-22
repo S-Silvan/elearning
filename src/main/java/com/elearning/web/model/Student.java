@@ -21,7 +21,8 @@ public class Student {
 	private String phoneNumber;
 	@Column(name="student_password",nullable=false)
 	private String password;
-	//private Assignment assignment;
+    private Assignment assignment;
+    
 	public Integer getId() {
 		return id;
 	}
@@ -52,10 +53,10 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	/*public Assignment getAssignment() {
+	public Assignment getAssignment() {
 		return assignment;
 	}
 	public void setAssignment(Assignment assignment) {
 		this.assignment = assignment;
-	}*/
+	}
 }
