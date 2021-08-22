@@ -1,6 +1,5 @@
 package com.elearning.web.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,34 +8,31 @@ import org.springframework.stereotype.Component;
 import com.elearning.web.dao.ProfileDao;
 import com.elearning.web.model.Student;
 
-import com.elearning.web.model.Student;
-
+@Component
 public class ProfileServiceImplementation implements ProfileService {
 	@Autowired
 	private ProfileDao profileDao;
 
 	@Override
-	public Integer addStudent(Student student) {
-		return (Integer)profileDao.save(student);
+	public Student addStudent(Student student) {
+		return profileDao.save(student);
 	}
 
 	@Override
-	public List<Student> getAllStudents() {
-		return (List<Student>)profileDao.findAll();
+	public Student getOneStudent(Integer id) {
+		Optional<Student> student=profileDao.findById(id);
+		return student.isPresent()?(Student)student.get():null;
 	}
 
 	@Override
-	public Optional<Student> getOneStudent(Integer id) {
-		return profileDao.findById(id);
+	public Student updateStudent(Student student) {
+		return profileDao.save(student);
 	}
 
 	@Override
-	public Integer updateStudent(Student student) {
-		return (Integer)profileDao.save(student);
-	}
-
-	@Override
-	public void deleteStudent(Integer id) {
+	public Student deleteStudent(Integer id) {
+		Student student=getOneStudent(id);
 		profileDao.deleteById(id);
+		return student;
 	}
 }
