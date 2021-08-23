@@ -1,5 +1,9 @@
 package com.elearning.web.dao;
 
-public interface TeacherDao {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.elearning.web.model.Course;
+
+public interface TeacherDao extends JpaRepository<Course,Integer>{
 
 }
