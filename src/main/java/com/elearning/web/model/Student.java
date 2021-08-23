@@ -11,17 +11,17 @@ import javax.persistence.Table;
 public class Student {
 	@Id
 	@GeneratedValue
-	@Column(name="student_id",nullable=false)
+	@Column(name="student_id")
 	private Integer id;
 	@Column(name="student_name",nullable=false)
 	private String name;
 	@Column(name="student_email",nullable=false)
 	private String email;
-	@Column(name="student_phone_number",nullable=false)
+	@Column(name="student_phone_number")
 	private String phoneNumber;
 	@Column(name="student_password",nullable=false)
 	private String password;
-    private Assignment assignment;
+    //private Assignment assignment;
     
 	public Integer getId() {
 		return id;
@@ -53,10 +53,10 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Assignment getAssignment() {
+	/*public Assignment getAssignment() {
 		return assignment;
 	}
 	public void setAssignment(Assignment assignment) {
 		this.assignment = assignment;
-	}
+	}*/
 }

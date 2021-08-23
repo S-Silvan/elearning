@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.elearning.web.dao.TeacherDao;
+import com.elearning.web.dao.CourseDao;
 import com.elearning.web.model.Assignment;
 import com.elearning.web.model.Course;
 
@@ -13,7 +13,7 @@ import com.elearning.web.model.Course;
 @Component
 public class TeacherServiceImplementation implements TeacherService {
 	@Autowired
-	private TeacherDao teacherdao;
+	private CourseDao teacherdao;
 	
 	@Override
 	public Course createCourse(Course course) {

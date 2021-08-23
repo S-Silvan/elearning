@@ -27,7 +27,7 @@ public class Assignment {
 	@Column(name="Submitted Date",nullable=false)
 	private Date submitted_date;
 	
-	private Student student;
+	//private Student student;
 
 	public Integer getAssignment_id() {
 		return assignment_id;
@@ -61,13 +61,13 @@ public class Assignment {
 		this.submitted_date = submitted_date;
 	}
 
-	public Student getStudent() {
+	/*public Student getStudent() {
 		return student;
 	}
 
 	public void setStudent(Student student) {
 		this.student = student;
-	}
+	}*/
 	
 
 }

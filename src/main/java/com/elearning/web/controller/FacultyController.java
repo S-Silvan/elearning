@@ -1,5 +1,7 @@
 package com.elearning.web.controller;
 
+import java.util.List;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,11 +12,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.elearning.web.model.Student;
-import com.elearning.web.service.ProfileService;
+import com.elearning.web.service.FacultyService;
 
 @RestController
-public class ProfileController {
-	private ProfileService profileService;
+public class FacultyController {
+	private FacultyService profileService;
 	
 	@PostMapping("/add-student")
 	@ResponseBody
@@ -23,11 +25,10 @@ public class ProfileController {
 		return student;
 	}
 	
-	@GetMapping("/get-student/{student_id}")
+	@GetMapping("/get-students")
 	@ResponseBody
-	public Student getStudent(@PathVariable("student_id")Integer studentId) {
-		Student student=profileService.getOneStudent(studentId);
-		return student;
+	public List<Student> getStudents() {
+		return profileService.getStudents();
 	}
 	
 	@PutMapping(path="/update-student")

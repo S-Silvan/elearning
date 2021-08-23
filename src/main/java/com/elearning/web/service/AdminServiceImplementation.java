@@ -5,13 +5,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.elearning.web.dao.AdminDao;
+import com.elearning.web.dao.TeacherDao;
 import com.elearning.web.model.Teacher;
 
 @Component
 public class AdminServiceImplementation implements AdminService {
 	@Autowired
-	private AdminDao admindao;
+	private TeacherDao admindao;
 	
 	@Override
 	public Teacher addTeacher(Teacher teacher)

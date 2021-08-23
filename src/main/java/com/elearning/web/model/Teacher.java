@@ -23,6 +23,7 @@ public class Teacher {
 	private String password;
 	@Column(name="Specialization",nullable=false)
 	private String specialization;
+	
 	public Integer getId() {
 		return id;
 	}

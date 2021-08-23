@@ -5,13 +5,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.elearning.web.dao.StudentDao;
+import com.elearning.web.dao.AssignmentDao;
 import com.elearning.web.model.Assignment;
 
 @Component
 public class StudentServiceImplementation implements StudentService {
 	@Autowired
-	private StudentDao studentDao;
+	private AssignmentDao studentDao;
 
 	@Override
 	public Assignment addAssignment(Assignment assignment) {
