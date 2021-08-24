@@ -26,10 +26,12 @@ public class Course {
 	private String course_category;
 	
 	@Column(name="Course Heading",nullable=false)
-	private Date course_heading;
+	private String course_heading;
 	
+	
+
 	@Column(name="Course Content",nullable=false)
-	private Date course_content;
+	private String course_content;
 
 	public Integer getCourse_id() {
 		return course_id;
@@ -54,22 +56,25 @@ public class Course {
 	public void setCourse_category(String course_category) {
 		this.course_category = course_category;
 	}
-
-	public Date getCourse_heading() {
+	
+	public String getCourse_heading() {
 		return course_heading;
 	}
 
-	public void setCourse_heading(Date course_heading) {
+	public void setCourse_heading(String course_heading) {
 		this.course_heading = course_heading;
 	}
 
-	public Date getCourse_content() {
+	public String getCourse_content() {
 		return course_content;
 	}
 
-	public void setCourse_content(Date course_content) {
+	public void setCourse_content(String course_content) {
 		this.course_content = course_content;
 	}
+
+
+	
 
 	@Override
 	public String toString() {
