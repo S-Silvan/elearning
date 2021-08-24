@@ -21,8 +21,14 @@ public class Teacher {
 	private String email;
 	@Column(name="Teacher_password",nullable=false)
 	private String password;
-	@Column(name="Specialization",nullable=false)
-	private String specialization;
+	@Column(name="Role",nullable=false)
+	private String Role;
+	public String getRole() {
+		return Role;
+	}
+	public void setRole(String role) {
+		Role = role;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -53,12 +59,8 @@ public class Teacher {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getSpecialization() {
-		return specialization;
-	}
-	public void setSpecialization(String specialization) {
-		this.specialization = specialization;
-	}
+
+
 	
 	// private Course course;
 	
