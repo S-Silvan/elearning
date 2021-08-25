@@ -1,79 +1,55 @@
 package com.elearning.web.model;
 
-import java.net.URL;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="CourseDetails")
+@Table(name="courses")
 public class Course {
 	@Id
 	@GeneratedValue
-	@Column(name="Course_id",nullable=false)
-	private Integer course_id;
-	@Column(name="Courseimage_url",nullable=false)
-	private String course_url;
-	@Column(name="Course_Category",nullable=false)
-	private String course_category;
-	@Column(name="Course_Heading",nullable=false)
-	private String course_heading;
-	@Column(name="Course_Content",nullable=false)
-	private String course_content;
-
-	public Integer getCourse_id() {
-		return course_id;
-	}
-
-	public void setCourse_id(Integer course_id) {
-		this.course_id = course_id;
-	}
-
-	public String getCourse_url() {
-		return course_url;
-	}
-
-	public void setCourse_url(String course_url) {
-		this.course_url = course_url;
-	}
-
-	public String getCourse_category() {
-		return course_category;
-	}
-
-	public void setCourse_category(String course_category) {
-		this.course_category = course_category;
-	}
+	@Column(name="course_id")
+	private Integer id;
+	@Column(name="course_image_url")
+	private String imageUrl;
+	@Column(name="course_category",nullable=false)
+	private String category;
+	@Column(name="course_title",nullable=false)
+	private String title;
+	@Column(name="course_content",nullable=false)
+	private String content;
 	
-	public String getCourse_heading() {
-		return course_heading;
+	public Integer getId() {
+		return id;
 	}
-
-	public void setCourse_heading(String course_heading) {
-		this.course_heading = course_heading;
+	public void setId(Integer id) {
+		this.id = id;
 	}
-
-	public String getCourse_content() {
-		return course_content;
+	public String getImageUrl() {
+		return imageUrl;
 	}
-
-	public void setCourse_content(String course_content) {
-		this.course_content = course_content;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
-
-
-	
-
-	@Override
-	public String toString() {
-		return "Course [course_id=" + course_id + ", course_url=" + course_url + ", course_category=" + course_category
-				+ ", course_heading=" + course_heading + ", course_content=" + course_content + "]";
+	public String getCategory() {
+		return category;
 	}
-	
-	
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
 }
