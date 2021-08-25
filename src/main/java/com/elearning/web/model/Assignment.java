@@ -1,6 +1,5 @@
 package com.elearning.web.model;
 
-import java.net.URL;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +18,7 @@ public class Assignment {
 	private Integer assignment_id;
 	
 	@Column(name="Assignment Link",nullable=false)
-	private URL assignment_link;
+	private String assignment_link;
 	
 	@Column(name="Remarks",nullable=false)
 	private String remark;
@@ -37,11 +36,11 @@ public class Assignment {
 		this.assignment_id = assignment_id;
 	}
 
-	public URL getAssignment_link() {
+	public String getAssignment_link() {
 		return assignment_link;
 	}
 
-	public void setAssignment_link(URL assignment_link) {
+	public void setAssignment_link(String assignment_link) {
 		this.assignment_link = assignment_link;
 	}
 
