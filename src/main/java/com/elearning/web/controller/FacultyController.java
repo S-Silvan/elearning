@@ -2,6 +2,7 @@ package com.elearning.web.controller;
 
 import java.util.List;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +19,7 @@ import com.elearning.web.service.FacultyService;
 public class FacultyController {
 	private FacultyService profileService;
 	
-	@PostMapping("/add-student")
+	@PostMapping(path="/add-student",consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Student addStudent(@RequestBody Student student) {
 		profileService.addStudent(student);
