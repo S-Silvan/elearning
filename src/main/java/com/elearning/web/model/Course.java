@@ -13,24 +13,17 @@ import javax.persistence.Table;
 @Entity
 @Table(name="CourseDetails")
 public class Course {
-	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="Course ID",nullable=false)
+	@GeneratedValue
+	@Column(name="Course_id",nullable=false)
 	private Integer course_id;
-	
-	@Column(name="Courseimage URL",nullable=false)
+	@Column(name="Courseimage_url",nullable=false)
 	private String course_url;
-	
-	@Column(name="Course Category",nullable=false)
+	@Column(name="Course_Category",nullable=false)
 	private String course_category;
-	
-	@Column(name="Course Heading",nullable=false)
+	@Column(name="Course_Heading",nullable=false)
 	private String course_heading;
-	
-	
-
-	@Column(name="Course Content",nullable=false)
+	@Column(name="Course_Content",nullable=false)
 	private String course_content;
 
 	public Integer getCourse_id() {

@@ -14,16 +14,16 @@ public class Assignment {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="Assignment ID",nullable=false)
+	@Column(name="Assignment_ID",nullable=false)
 	private Integer assignment_id;
 	
-	@Column(name="Assignment Link",nullable=false)
+	@Column(name="Assignment_Link",nullable=false)
 	private String assignment_link;
 	
 	@Column(name="Remarks",nullable=false)
 	private String remark;
 	
-	@Column(name="Submitted Date",nullable=false)
+	@Column(name="Submitted_Date",nullable=false)
 	private Date submitted_date;
 	
 	//private Student student;
