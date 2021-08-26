@@ -26,7 +26,7 @@ public class FacultyController {
 		return student;
 	}
 	
-	@GetMapping("/get-students")
+	@GetMapping("/students")
 	@ResponseBody
 	public List<Student> getStudents() {
 		return profileService.getStudents();
