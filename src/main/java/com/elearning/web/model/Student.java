@@ -1,9 +1,12 @@
 package com.elearning.web.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +26,15 @@ public class Student {
 	private String password;
     //private Assignment assignment;
     
+	@ManyToMany
+	private List<Course> courselist;
+	
+	public List<Course> getCourselist() {
+		return courselist;
+	}
+	public void setCourselist(List<Course> courselist) {
+		this.courselist = courselist;
+	}
 	public Integer getId() {
 		return id;
 	}
