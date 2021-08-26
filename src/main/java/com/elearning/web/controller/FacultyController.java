@@ -19,7 +19,7 @@ import com.elearning.web.service.FacultyService;
 public class FacultyController {
 	private FacultyService profileService;
 	
-	@PostMapping(path="/add-student",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(path="/add-student1",consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Student addStudent(@RequestBody Student student) {
 		profileService.addStudent(student);

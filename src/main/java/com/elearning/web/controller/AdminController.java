@@ -17,14 +17,12 @@ public class AdminController {
 	private AdminService adminservice;
 	
 	@PostMapping("/add-teacher")
-	@ResponseBody
 	public Teacher addTeacher(@RequestBody Teacher teacher) {
 		adminservice.addTeacher(teacher);
 		return teacher;
 	}
 	
 	@GetMapping("/get-teacher/{Teacher_id}")
-	@ResponseBody
 	public Teacher getTeacher(@PathVariable("Teacher_id")Integer teacherId) {
 		Teacher teacher=adminservice.getOneTeacher(teacherId);
 		return teacher;
