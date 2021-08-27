@@ -58,12 +58,7 @@ public class TeacherController {
 	}
 	
 	@PostMapping("/login")
-	public boolean login(@RequestParam("userid")String userId,@RequestParam("password")String password,HttpServletRequest request) {
-		Teacher teacher=teacherService.login(userId, password);
-		if(teacher!=null) {
-			request.getSession().setAttribute("profile",teacher);
-			return true;
-		}
-		return false;
+	public Teacher login(@RequestParam("userid")String userId,@RequestParam("password")String password,HttpServletRequest request) {
+		return teacherService.login(userId, password);	
 	}
 }
