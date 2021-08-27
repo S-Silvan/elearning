@@ -12,6 +12,7 @@ import com.elearning.web.dao.StudentDao;
 import com.elearning.web.model.Assignment;
 import com.elearning.web.model.Course;
 import com.elearning.web.model.Student;
+import com.elearning.web.model.Teacher;
 
 @Component
 public class StudentServiceImplementation implements StudentService {
@@ -39,6 +40,14 @@ public class StudentServiceImplementation implements StudentService {
 		Course c= courseDao.findById(id).get();
 		student.getCourselist().add(c);
 		return studentdao.save(student);
+	}
+	
+	@Override
+	public Student login(String userId, String password) {
+		List<Student> studentList=studentdao.login(userId,password);
+		if(studentList.size()>0)
+			return studentList.get(0);
+		return null;
 	}
 	
 	
