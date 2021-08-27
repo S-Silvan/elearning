@@ -15,7 +15,7 @@ public interface StudentService {
 	public List<Course> getCourses();
 	public Student enrollCourse(Integer id,Student student);
 	public Student login(String userId, String password);
-	public List<Student> getStudent();
+	//public List<Student> getStudent();
 	//public List<Course> getenrolledcourses();
  
 	
