@@ -40,11 +40,12 @@ public class StudentController {
 	}
 	
 	@PostMapping(path="/enroll-course")
-	public Student enrollCourse(@RequestParam("cid")Integer id,HttpServletRequest request)
+	public Student enrollCourse(@RequestParam("cid")String cid,@RequestParam("sid")String sid)
 	{
-		Student student=(Student)request.getSession().getAttribute("profile");
-		return studentService.enrollCourse(id, student);
+		
+		return studentService.enrollCourse(Integer.parseInt(cid),Integer.parseInt(sid));
 	}
+	
 	
 	
 	

@@ -13,7 +13,7 @@ public interface StudentService {
 	
 	public Student addStudent(Student student);
 	public List<Course> getCourses();
-	public Student enrollCourse(Integer id,Student student);
+	public Student enrollCourse(Integer id,Integer sid);
 	public Student login(String userId, String password);
 	//public List<Student> getStudent();
 	//public List<Course> getenrolledcourses();
