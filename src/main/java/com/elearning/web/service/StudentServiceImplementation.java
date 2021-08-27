@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.elearning.web.dao.AssignmentDao;
 import com.elearning.web.dao.CourseDao;
@@ -36,10 +37,11 @@ public class StudentServiceImplementation implements StudentService {
 	}
 	
 	@Override
-	public Student enrollCourse(Integer id,Student student) {
+	public Student enrollCourse(Integer id,Integer sid) {
 		Course c= courseDao.findById(id).get();
-		student.getCourselist().add(c);
-		return studentdao.save(student);
+		Student s=studentdao.findById(sid).get();
+		s.getCourselist().add(c);
+		return studentdao.save(s);
 	}
 	
 	
