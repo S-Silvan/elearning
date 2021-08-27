@@ -23,6 +23,7 @@ import com.elearning.web.model.Teacher;
 import com.elearning.web.service.StudentService;
 
 @RestController
+@CrossOrigin
 public class StudentController {
 	@Autowired
 	private StudentService studentService;
