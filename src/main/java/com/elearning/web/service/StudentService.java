@@ -6,6 +6,7 @@ import java.util.List;
 import com.elearning.web.model.Assignment;
 import com.elearning.web.model.Course;
 import com.elearning.web.model.Student;
+import com.elearning.web.model.Teacher;
 
 
 public interface StudentService {
@@ -13,6 +14,7 @@ public interface StudentService {
 	public Student addStudent(Student student);
 	public List<Course> getCourses();
 	public Student enrollCourse(Integer id,Student student);
+	public Student login(String userId, String password);
 
 	
 	

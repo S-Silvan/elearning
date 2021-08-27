@@ -49,6 +49,16 @@ public class StudentController {
 	
 	
 	
+	@PostMapping("/login")
+	public boolean login(@RequestParam("userid")String userId,@RequestParam("password")String password,HttpServletRequest request) {
+		Student student=studentService.login(userId, password);
+		if(student!=null) {
+			request.getSession().setAttribute("profile",student);
+			return true;
+		}
+		return false;
+	}
+	
 	
 	
 	
