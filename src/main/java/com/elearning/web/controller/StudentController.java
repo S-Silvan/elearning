@@ -51,7 +51,7 @@ public class StudentController {
 	
 	
 	
-	@PostMapping("/login")
+	@PostMapping("/student-login")
 	public Student login(@RequestParam("userid")String userId,@RequestParam("password")String password,HttpServletRequest request) {
 		return studentService.login(userId, password);
 		
