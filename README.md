@@ -1,8 +1,8 @@
 # E-Learning
-##Description
+## Description
 Educational applications or eLearning apps have become a primary source of imparting education for many institutions, universities, colleges, and schools.
 The demand for such applications has increased to modernize the field of education.
-##Technologies used
+## Technologies used
 * Java 8
 * MySQL
 * Spring Boot
@@ -14,7 +14,7 @@ The demand for such applications has increased to modernize the field of educati
 * CSS
 * TypeScript
 * Angular
-##Features
+## Features
 * Student can enroll in a course
 * Student can view all enrolled courses
 * Student can view all courses
