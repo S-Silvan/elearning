@@ -26,11 +26,8 @@ The demand for such applications has increased to modernize the field of educati
 * Teacher can view all students
 * Teacher can view all courses
 ## Usage
-* Clone the project using _git_ clone command
-* Open the frontend folder and run _ng build_ command
-* Open the backend folder, and import it in your _ide_ and run the application
+* Clone the project using `git clone` command
+* Open the frontend folder and run `ng build` command
+* Run ng serve for a dev server. Navigate to http://localhost:4200/
+* Open the backend folder, and import it in your ide and run the application
 * Change the urls in the service layer of the frontend application
-## Contributors
-* Anjan Pradhan
-* Kamesh
-* Subiksha
