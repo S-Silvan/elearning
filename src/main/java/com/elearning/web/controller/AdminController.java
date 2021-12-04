@@ -38,4 +38,10 @@ public class AdminController {
 	public Teacher deleteTeacher(@PathVariable("Teacher_id")Integer teacherId) {
 		return adminservice.deleteTeacher(teacherId);
 	}
+	 
+	@DeleteMapping("/delete-techer/{Techer_id}")
+	public Teacher deleteTeacher() {
+		return null;
+		
+	}
 }
